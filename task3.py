@@ -29,7 +29,7 @@ def deposit(balance, operations):
     amount = 1
     while amount % MULTIPLICITY != 0:
         amount = int(input(f'Введите сумму кратную {MULTIPLICITY}: '))
-    operations.append((amount, 'deposit'))
+    operations.append((amount, 'зачисление'))
     return balance + amount, operations
 
 def withdraw(balance, operations):
@@ -49,7 +49,7 @@ def withdraw(balance, operations):
     if comission + amount > balance:
         print(f'На балансе недостаточно средств')
     else:
-        operations.append((amount, 'withdraw'))
+        operations.append((amount, 'снятие'))
         return balance - amount - comission, operations
 
 def apply_bonus(balance):
